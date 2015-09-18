@@ -1,0 +1,1 @@
+main: cd $DIR && python -m http.server $PORT
