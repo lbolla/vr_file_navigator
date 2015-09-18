@@ -1,1 +1,1 @@
-main: bash -c "cd $DIR && python3 -m http.server $PORT"
+main: bin/main
