@@ -1,3 +1,11 @@
 #!/bin/bash
 
+function die {
+    echo $1
+    exit 1
+}
+test "$DIR" || die "Dir not set."
+test -d "$DIR" || die "$DIR not a directory."
+
+echo "Serving files from $DIR on port $PORT"
 cd $DIR && python3 -m http.server $PORT
